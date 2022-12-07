@@ -1,0 +1,10 @@
+<p>List Component</p>
+<input [(ngModel)]="name" #newPerson />
+
+<button type="button" (click)="addPerson(newPerson.value)">Add</button>
+
+<ul id="lista">
+  <!-- <li *ngFor="let person of people">
+    {{ person }} <a href="/" id="usun">Delete</a>
+  </li> -->
+</ul>

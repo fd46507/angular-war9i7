@@ -4,10 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { RandomComponent } from './random/random.component';
+import { ListComponent } from './list/list.component';
+import { RandomService } from './random/random.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule, CommonModule],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    RandomComponent,
+    RandomComponent,
+    ListComponent,
+  ],
+  bootstrap: [AppComponent],
+  providers: [RandomService],
 })
-export class AppModule { }
+export class AppModule {}

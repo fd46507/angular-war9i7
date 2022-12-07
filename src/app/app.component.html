@@ -1,4 +1,8 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<hello name="{{ text }}"></hello>
+<app-random ran1="{{ ran1 }}" ran11="{{ ran11 }}"> </app-random>
+<div id="half"></div>
+<button type="button" (click)="getRandom()">Losuj</button>
+<app-random1 ran2="{{ ran2 }}" ran22="{{ ran22 }}"></app-random1>
+<div id="half1"></div>
+<button type="button" (click)="getRandom1()">Losuj</button>
+<app-list></app-list>
