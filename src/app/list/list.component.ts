@@ -14,26 +14,24 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {}
 
-  deletePerson(el, li) {
-    el.removeChild(li);
+  deletePerson(ul, li) {
+    ul.removeChild(li);
   }
 
   addPerson(newPersonn: string) {
     if (newPersonn) {
       this.people.push(newPersonn);
     }
-    let el = document.getElementById('lista');
+    let ul = document.getElementById('lista');
     let li = document.createElement('li');
     li.innerHTML = this.people[this.ids] + '  ';
     let a = document.createElement('a');
-    a.innerHTML = 'delete';
+    a.innerHTML = 'usuń';
     a.setAttribute('href', '#');
-    a.addEventListener('click', this.deletePerson.bind(null, el, li));
+    a.addEventListener('click', this.deletePerson.bind(null, ul, li));
     li.appendChild(a);
-    el.appendChild(li);
+    ul.appendChild(li);
     this.ids++;
-    let n = document.getElementById('nowy');
-    console.log(n);
     this.name = '';
   }
 }

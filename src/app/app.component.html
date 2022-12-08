@@ -1,8 +1,18 @@
 <hello name="{{ text }}"></hello>
-<app-random ran1="{{ ran1 }}" ran11="{{ ran11 }}"> </app-random>
-<div id="half"></div>
-<button type="button" (click)="getRandom()">Losuj</button>
-<app-random1 ran2="{{ ran2 }}" ran22="{{ ran22 }}"></app-random1>
-<div id="half1"></div>
-<button type="button" (click)="getRandom1()">Losuj</button>
-<app-list></app-list>
+<div class="class1">
+  <div class="content">
+    <app-random [max_num]="100"></app-random>
+  </div>
+</div>
+<br />
+<div class="class2">
+  <div class="content">
+    <app-random [max_num]="10"></app-random>
+  </div>
+</div>
+<br />
+<div class="class3">
+  <div class="content">
+    <app-list></app-list>
+  </div>
+</div>
