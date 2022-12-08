@@ -6,7 +6,7 @@ import { Component, Inject, OnInit, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  text = 'Moja pierwsza appka w Angular';
+  text: string = 'Moja pierwsza appka w Angular';
   constructor() {}
 
   ngOnInit(): void {}

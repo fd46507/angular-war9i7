@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class RandomService {
   constructor() {}
 
-  getRandomInt(num) {
+  getRandomInt(num: number) {
     return Math.floor(Math.random() * num) + 1;
   }
 }

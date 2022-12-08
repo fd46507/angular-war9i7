@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css'],
 })
 export class ListComponent implements OnInit {
-  name = '';
-  li_id = 0;
-  components = [];
+  name: string = '';
+  li_id: number = 0;
+  components: Array<string> = [];
 
   constructor() {}
 

@@ -11,11 +11,11 @@ export class RandomComponent implements OnInit {
   @Input() random_number: number;
   @Input() text: string;
   @Input() text_color: string;
-  random_service = new RandomService();
+  random_service: RandomService = new RandomService();
 
   constructor() {}
 
-  getRandom(max_num) {
+  getRandom(max_num: number) {
     this.random_number = this.random_service.getRandomInt(max_num);
     if (this.random_number > 0.5 * max_num) {
       this.text = 'Górna połowa wartości';
