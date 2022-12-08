@@ -7,31 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
   name = '';
-  ids = 0;
-  constructor() {}
+  li_id = 0;
+  components = [];
 
-  people = [];
+  constructor() {}
 
   ngOnInit() {}
 
-  deletePerson(ul, li) {
-    ul.removeChild(li);
-  }
-
-  addPerson(newPersonn: string) {
-    if (newPersonn) {
-      this.people.push(newPersonn);
-    }
+  addComponent(newComponent: string) {
+    this.components.push(newComponent);
     let ul = document.getElementById('lista');
     let li = document.createElement('li');
-    li.innerHTML = this.people[this.ids] + '  ';
+    li.innerHTML = this.components[this.li_id] + ' ';
     let a = document.createElement('a');
     a.innerHTML = 'usuń';
     a.setAttribute('href', '#');
-    a.addEventListener('click', this.deletePerson.bind(null, ul, li));
+    a.addEventListener('click', this.deleteComponent.bind(null, ul, li));
     li.appendChild(a);
     ul.appendChild(li);
-    this.ids++;
+    this.li_id++;
     this.name = '';
+  }
+
+  deleteComponent(ul, li) {
+    ul.removeChild(li);
   }
 }

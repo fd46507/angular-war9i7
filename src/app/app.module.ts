@@ -11,13 +11,7 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, CommonModule],
-  declarations: [
-    AppComponent,
-    HelloComponent,
-    RandomComponent,
-    RandomComponent,
-    ListComponent,
-  ],
+  declarations: [AppComponent, HelloComponent, RandomComponent, ListComponent],
   bootstrap: [AppComponent],
   providers: [RandomService],
 })
